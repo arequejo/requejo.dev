@@ -6,9 +6,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier --ignore-path .gitignore --write ."
   },
   "devDependencies": {
-    "astro": "^0.22.20"
+    "@requejo/prettier-config": "^1.1.0",
+    "astro": "^0.22.20",
+    "prettier": "^2.5.1",
+    "prettier-plugin-astro": "^0.0.12"
   }
 }
