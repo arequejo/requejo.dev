@@ -7,12 +7,20 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --ignore-path .gitignore --write ."
+    "format": "prettier --ignore-path .gitignore --write .",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@requejo/prettier-config": "^1.1.0",
     "astro": "^0.22.20",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
     "prettier-plugin-astro": "^0.0.12"
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx|astro|md|json|css)": [
+      "prettier --write"
+    ]
   }
 }
