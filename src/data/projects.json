@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Basta",
+    "description": "Based on the traditional Mexican game",
+    "liveUrl": "https://basta.requejo.dev",
+    "repoUrl": "https://github.com/arequejo/basta",
+    "tags": ["react", "typescript", "vite", "vitest", "xstate", "tailwindcss"]
+  }
+]

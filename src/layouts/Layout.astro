@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+}
+const {
+  title = 'Alejandro Requejo',
+  subtitle = '',
+  description = 'A Software Engineer focusing on Frontend Development',
+} = Astro.props;
+const fullTitle = [title, subtitle].filter(Boolean).join(' | ');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body
+    class="p-8 pt-[calc(60px_+_2rem)] text-lg bg-slate-50 text-slate-800 font-mono grid grid-cols-[1fr,minmax(auto,_600px),_1fr] content-center"
+  >
+    <header>
+      <nav class="fixed top-0 right-0 left-0 p-4 backdrop-blur-md shadow">
+        <ul class="flex justify-center gap-8">
+          <li><a href="/" class="underline">About</a></li>
+          <li><a href="/projects" class="underline">Projects</a></li>
+          <li>
+            <a
+              href="https://github.com/arequejo"
+              target="_blank"
+              class="underline"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <slot />
+  </body>
+</html>

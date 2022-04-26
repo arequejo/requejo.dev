@@ -1,0 +1,35 @@
+---
+export interface Props {
+  name: string;
+  description: string;
+  repoUrl?: string;
+  liveUrl?: string;
+  tags?: string[];
+}
+const { name, description, repoUrl, liveUrl, tags } = Astro.props;
+---
+
+<div class="space-y-2">
+  <h2 class="text-xl">
+    {liveUrl ? (
+      <a href={liveUrl} target="_blank" class="underline">
+        {name}
+      </a>
+    ) : (
+      name
+    )}
+  </h2>
+  <p>{description}</p>
+  {tags.length > 0 ? (
+    <ul class="flex flex-wrap gap-2 text-sm">
+      {tags.map((tag) => (
+        <li class="px-2 py-1 bg-black text-white">{tag}</li>
+      ))}
+    </ul>
+  ) : null}
+  {repoUrl ? (
+    <a href={repoUrl} target="_blank" class="block text-sm underline">
+      GitHub
+    </a>
+  ) : null}
+</div>

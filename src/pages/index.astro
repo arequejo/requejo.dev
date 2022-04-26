@@ -1,33 +1,15 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="A Software Engineer working as a Frontend Developer"
-    />
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-    <title>Alejandro Requejo</title>
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  </head>
-  <body class="text-2xl bg-slate-50 text-slate-800 font-mono">
-    <header
-      class="p-8 h-screen grid grid-cols-[1fr,minmax(auto,_700px),_1fr] items-center"
-    >
-      <div class="col-start-2 col-end-3 space-y-4">
-        <h1 class="text-3xl">Hey, I&#39;m Alejandro Requejo.</h1>
-        <p>
-          A Software Engineer based in
-          <span
-            class="bg-clip-text text-transparent bg-gradient-to-r from-green-700  via-amber-800 to-red-700 font-bold"
-          >
-            Mexico
-          </span>
-          working as a Frontend Developer with React and I&#39;m passionate about
-          testing.
-        </p>
-      </div>
-    </header>
-  </body>
-</html>
+<Layout>
+  <div
+    class="h-[calc(100vh_-_60px_-_4rem)] col-start-2 col-end-3 space-y-4 flex flex-col justify-center"
+  >
+    <h1 class="text-2xl">Hey, I&#39;m Alejandro Requejo.</h1>
+    <p>
+      A Software Engineer focusing on Frontend Development with React and
+      I&#39;m passionate about testing.
+    </p>
+  </div>
+</Layout>
